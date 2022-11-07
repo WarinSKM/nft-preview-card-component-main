@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      body {
+        background-color: hsl(217, 54%, 11%);
+        margin: 0;
+        padding: 0;
+        font-family: "Outfit", sans-serif;
+      }
+      .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 12px;
+        width: calc(350px - 48px);
+        padding: 24px;
+        font-size: 18px;
+        color: hsl(215, 51%, 70%);
+        font-weight: 300;
+      }
+      .card .card-img {
+        position: relative;
+        cursor: pointer;
+      }
+      .card .card-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+      }
+      .card .card-img .card-img-hover-effect {
+        opacity: 0;
+        position: absolute;
+        background-color: hsla(178, 100%, 50%, 0.3);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 98%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        transition-property: opacity;
+        transition-duration: 200ms;
+      }
+      .card .card-img:hover > .card-img-hover-effect {
+        opacity: 1;
+      }
+      .card .card-img .card-img-hover-effect img {
+        width: 48px;
+        height: 48px;
+      }
+      .card .card-title {
+        color: white;
+        font-size: 22px;
+        font-weight: 600;
+        cursor: pointer;
+        transition-property: color;
+        transition-duration: 200ms;
+      }
+      .card .card-title:hover {
+        color: hsl(178, 100%, 50%);
+      }
+      .card .card-sub-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+      }
+      .card .card-sub-content > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .card .card-sub-content .card-price {
+        font-weight: 600;
+        color: hsl(178, 100%, 50%);
+      }
+      .card .card-sub-content img {
+        margin-right: 0.5rem;
+      }
+      .card hr {
+        border-color: hsl(215, 51%, 70%);
+        font-weight: 400;
+      }
+      .card .card-footer {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .card .avatar {
+        background-color: white;
+        border-radius: 99999999px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1px;
+        width: 33px;
+        margin-right: 1rem;
+      }
+      .card .avatar img {
+        width: 100%;
+        height: 100%;
+      }
+      .card .card-creator span {
+        color: white;
+        cursor: pointer;
+        transition-property: color;
+        transition-duration: 200ms;
+      }
+      .card .card-creator span:hover {
+        color: hsl(178, 100%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-img">
+          <img src="./images/image-equilibrium.jpg" />
+          <div class="card-img-hover-effect">
+            <img src="./images/icon-view.svg" />
+          </div>
+        </div>
+        <h4 class="card-title">Equilibrium #3429</h4>
+        <div class="card-content">
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="card-sub-content">
+          <div class="card-price">
+            <img src="./images/icon-ethereum.svg" />
+            <p>0.041 ETH</p>
+          </div>
+          <div class="card-date">
+            <img src="./images/icon-clock.svg" />
+            <p>3 days left</p>
+          </div>
+        </div>
+        <hr />
+        <div class="card-footer">
+          <div class="avatar">
+            <img src="./images/image-avatar.png" />
+          </div>
+          <div class="card-creator">Creation of <span>Jules Wyvern</span></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
